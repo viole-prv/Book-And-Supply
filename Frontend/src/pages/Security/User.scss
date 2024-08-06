@@ -1,0 +1,7 @@
+.security__user-wrapper {
+  width: 100%;
+
+  @media screen and (width <= 1024px) {
+    padding: 0 15px;
+  }
+}

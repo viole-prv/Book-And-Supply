@@ -1,0 +1,100 @@
+.gallery__wrapper {
+  display: flex;
+  gap: 15px;
+
+  @media screen and (width <= 1024px) {
+    flex-direction: column-reverse;
+  }
+
+  @media screen and (width > 1024px) {
+    height: 398px;
+  }
+
+  .gallery__slider {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    @media screen and (width <= 1024px) {
+      justify-content: center;
+      padding: 0 10px;
+    }
+
+    @media screen and (width > 1024px) {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    svg {
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      fill: var(--primary-100);
+      transition: fill .2s ease-in-out;
+
+      &:hover {
+        fill: var(--primary-200);
+      }
+    }
+
+    .slider-container {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      gap: 6px;
+
+      @media screen and (width > 1024px) {
+        flex-direction: column;
+      }
+
+      .slider {
+        flex-shrink: 0;
+        display: flex;
+        border: 2px solid transparent;
+        transition: border-color .2s ease-in-out;
+        border-radius: 6px;
+        padding: 4px;
+        cursor: pointer;
+
+        @media screen and (width <= 1024px) {
+          width: 80px;
+          height: 60px;
+        }
+
+        @media screen and (width > 1024px) {
+          width: 60px;
+          height: 80px;
+        }
+
+        &:hover {
+          border-color: var(--primary-100);
+        }
+
+        &-current {
+          border-color: var(--primary-100);
+        }
+      }
+    }
+  }
+
+  .gallery__picture {
+    width: 100%;
+    display: flex;
+
+    @media screen and (width <= 425px) {
+      height: 300px;
+    }
+
+    @media screen and (width <= 768px) and (width > 425px) {
+      height: 400px;
+    }
+
+    @media screen and (width <= 1024px) and (width > 768px) {
+      height: 500px;
+    }
+
+    @media screen and (width > 1024px) {
+      height: 100%;
+    }
+  }
+}

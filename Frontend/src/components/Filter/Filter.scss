@@ -1,0 +1,47 @@
+.filter {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    column-gap: 4px;
+    cursor: pointer;
+
+    &:hover > svg {
+      fill: var(--primary-100);
+    }
+
+    &:hover > span {
+      color: var(--primary-100);
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: #ccc;
+      transition: fill .2s ease-in-out;
+    }
+
+    span {
+      font-size: 14px;
+      transition: color .2s ease-in-out;
+      text-align: left;
+    }
+  }
+
+  &-active > svg {
+      fill: var(--primary-100);
+  }
+
+  &-active > span {
+    color: var(--primary-100);
+  }
+
+  &__bottom {
+    margin-left: 28px;
+    margin-right: 4px;
+  }
+}

@@ -1,0 +1,16 @@
+.profile__order-wrapper {
+  width: 100%;
+}
+@media screen and (width <= 1024px) {
+  .profile__order-wrapper {
+    padding: 15px;
+  }
+}
+.profile__order-wrapper .order {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+/*# sourceMappingURL=Order.css.map */

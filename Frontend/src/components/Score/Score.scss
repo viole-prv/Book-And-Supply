@@ -1,0 +1,45 @@
+.score-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .score {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    @media screen and (width <= 425px) {
+      flex-direction: column;
+      row-gap: 10px;
+    }
+
+    @media screen and (width > 425px) {
+      justify-content: space-evenly;
+      column-gap: 10px;
+    }
+
+    &__average {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 6px;
+
+      .average__star {
+        font-weight: 500;
+        font-size: 20px;
+      }
+    }
+
+    &__scheme {
+      width: 100%;
+
+      @media screen and (width <= 1024px) {
+        max-width: 250px;
+      }
+
+      @media screen and (width > 1024px) {
+        max-width: 300px;
+      }
+    }
+  }
+}

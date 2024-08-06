@@ -1,0 +1,172 @@
+.home-wrapper {
+  width: 100%;
+
+  @media screen and (width <= 768px) {
+    scroll-margin-top: 115px;
+  }
+
+  @media screen and (width > 768px) {
+    scroll-margin-top: 95px;
+  }
+
+  @media screen and (width > 1024px) {
+    max-width: 1440px;
+    padding: 15px;
+  }
+
+  .home {
+    display: grid;
+    align-items: start;
+    grid-template-rows: auto auto auto 1fr auto;
+
+    @media screen and (width <= 1024px) {
+      grid-template-areas: "sort filter" "separate separate" "piece piece" "pagination pagination";
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (width > 1024px) {
+      grid-template-areas: "filter sort" "filter separate" "filter brick" "filter piece" "filter pagination";
+      grid-template-columns: 225px 1fr;
+      column-gap: 40px;
+    }
+
+    &__sort {
+      grid-area: sort;
+
+      @media screen and (width <= 1024px) {
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 15px;
+      }
+
+      @media screen and (width > 1024px) {
+        .select-wrapper {
+          width: 200px;
+        }
+      }
+    }
+
+    .filter-container {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+    }
+
+    &__filter {
+      grid-area: filter;
+
+      .filter__header {
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+        cursor: pointer;
+
+        &:hover > span {
+          color: var(--primary-100);
+        }
+
+        &:hover > svg {
+          fill: var(--primary-200);
+        }
+
+        span {
+          transition: color .2s ease-in-out;
+          font-size: 16px;
+        }
+
+        svg {
+          width: 20px;
+          height: 20px;
+          fill: var(--primary-100);
+          transition: fill .2s ease-in-out;
+        }
+      }
+
+      @media screen and (width <= 1024px) {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 15px;
+      }
+    }
+
+    .brick-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 10px;
+
+      @media screen and (width <= 1024px) {
+        padding-top: 10px;
+        padding-bottom: 20px;
+      }
+
+      @media screen and (width > 1024px) {
+        padding-top: 4px;
+        padding-bottom: 8px;
+      }
+
+      .brick {
+        display: flex;
+        align-items: center;
+        background-color: var(--primary-100);
+        border-radius: 6px;
+        padding: 6px 12px;
+        column-gap: 4px;
+        cursor: pointer;
+        transition: box-shadow .2s ease-in-out;
+
+        &:hover {
+          box-shadow: 0 0 10px var(--primary-200);
+        }
+
+        &__name {
+          color: #fff;
+          font-size: 14px;
+        }
+
+        &__icon {
+          width: 16px;
+          height: 16px;
+          fill: #fff;
+        }
+      }
+    }
+
+    &__brick {
+      grid-area: brick;
+    }
+
+    &__separate {
+      grid-area: separate;
+      border-top: 1px solid #f7f7f7;
+      margin-top: 14px;
+      padding-bottom: 8px;
+    }
+
+    &__piece {
+      grid-area: piece;
+      display: grid;
+      gap: 10px 15px;
+
+      @media screen and (width <= 425px) {
+        grid-template-columns: repeat(auto-fit, minmax(var(--mobile), 1fr));
+      }
+
+      @media screen and (width <= 1024px) and (width > 425px) {
+        grid-template-columns: repeat(auto-fit, minmax(var(--tablet), 1fr));
+      }
+
+      @media screen and (width > 1024px) {
+        grid-template-columns: repeat(auto-fit, minmax(var(--desktop), 1fr));
+      }
+    }
+
+    &__pagination {
+      grid-area: pagination;
+      width: 100%;
+
+      @media screen and (width <= 1024px) {
+        padding-bottom: 15px;
+      }
+    }
+  }
+}

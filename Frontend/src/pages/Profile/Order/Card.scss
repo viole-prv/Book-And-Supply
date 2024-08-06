@@ -1,0 +1,128 @@
+.order-card {
+  width: 100%;
+  display: grid;
+  align-items: center;
+
+  @media screen and (width <= 425px) {
+    gap: 20px;
+  }
+
+  @media screen and (width > 425px) {
+    gap: 40px;
+  }
+
+  @media screen and (width <= 1024px) {
+    grid-template-areas: "picture string" "picture number";
+    grid-template-columns: auto 1fr;
+  }
+
+  @media screen and (width > 1024px) {
+    grid-template-areas: "picture string number";
+    grid-template-columns: auto 1fr 1fr;
+  }
+
+  .order-card__picture {
+    grid-area: picture;
+    display: flex;
+
+    @media screen and (width <= 1024px) {
+      height: 125px;
+    }
+
+    @media screen and (width > 1024px) {
+      height: 150px;
+    }
+  }
+
+  .order-card__header {
+    grid-area: string;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    .header__name > span {
+      font-size: 14px;
+      transition: color .2s ease-in-out;
+
+      &:hover {
+        color: var(--primary-100);
+      }
+    }
+
+    .header__say {
+      font-size: 12px;
+      transition: color .2s ease-in-out;
+      user-select: none;
+      cursor: pointer;
+
+      &:hover {
+        color: var(--primary-100);
+      }
+    }
+  }
+
+  .order-card__footer {
+    grid-area: number;
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      font-weight: 500;
+      font-size: 12px;
+    }
+  }
+
+  .order-card__say {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .say__star-container {
+      display: flex;
+      margin-bottom: 16px;
+      column-gap: 8px;
+
+      &:hover > .star {
+        fill: #ffca00;
+      }
+
+      > svg:hover ~ .star {
+        fill: #efefef;
+      }
+
+      .star {
+        fill: #efefef;
+        transition: fill .2s ease-in-out;
+        cursor: pointer;
+
+        @media screen and (width <= 425px) {
+          width: 22px;
+          height: 22px;
+        }
+
+        @media screen and (width > 425px) {
+          width: 24px;
+          height: 24px;
+        }
+
+        &-active {
+          fill: #ffca00;
+        }
+      }
+    }
+
+    .say__textarea {
+      width: 100%;
+      padding: 0 10px;
+      margin-bottom: 10px;
+
+      textarea {
+        height: 150px;
+      }
+    }
+
+    button {
+      width: 50%;
+    }
+  }
+}

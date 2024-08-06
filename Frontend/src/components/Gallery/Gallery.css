@@ -1,0 +1,105 @@
+.gallery__wrapper {
+  display: flex;
+  gap: 15px;
+}
+@media screen and (width <= 1024px) {
+  .gallery__wrapper {
+    flex-direction: column-reverse;
+  }
+}
+@media screen and (width > 1024px) {
+  .gallery__wrapper {
+    height: 398px;
+  }
+}
+.gallery__wrapper .gallery__slider {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+@media screen and (width <= 1024px) {
+  .gallery__wrapper .gallery__slider {
+    justify-content: center;
+    padding: 0 10px;
+  }
+}
+@media screen and (width > 1024px) {
+  .gallery__wrapper .gallery__slider {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+.gallery__wrapper .gallery__slider svg {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  fill: var(--primary-100);
+  transition: fill 0.2s ease-in-out;
+}
+.gallery__wrapper .gallery__slider svg:hover {
+  fill: var(--primary-200);
+}
+.gallery__wrapper .gallery__slider .slider-container {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  gap: 6px;
+}
+@media screen and (width > 1024px) {
+  .gallery__wrapper .gallery__slider .slider-container {
+    flex-direction: column;
+  }
+}
+.gallery__wrapper .gallery__slider .slider-container .slider {
+  flex-shrink: 0;
+  display: flex;
+  border: 2px solid transparent;
+  transition: border-color 0.2s ease-in-out;
+  border-radius: 6px;
+  padding: 4px;
+  cursor: pointer;
+}
+@media screen and (width <= 1024px) {
+  .gallery__wrapper .gallery__slider .slider-container .slider {
+    width: 80px;
+    height: 60px;
+  }
+}
+@media screen and (width > 1024px) {
+  .gallery__wrapper .gallery__slider .slider-container .slider {
+    width: 60px;
+    height: 80px;
+  }
+}
+.gallery__wrapper .gallery__slider .slider-container .slider:hover {
+  border-color: var(--primary-100);
+}
+.gallery__wrapper .gallery__slider .slider-container .slider-current {
+  border-color: var(--primary-100);
+}
+.gallery__wrapper .gallery__picture {
+  width: 100%;
+  display: flex;
+}
+@media screen and (width <= 425px) {
+  .gallery__wrapper .gallery__picture {
+    height: 300px;
+  }
+}
+@media screen and (width <= 768px) and (width > 425px) {
+  .gallery__wrapper .gallery__picture {
+    height: 400px;
+  }
+}
+@media screen and (width <= 1024px) and (width > 768px) {
+  .gallery__wrapper .gallery__picture {
+    height: 500px;
+  }
+}
+@media screen and (width > 1024px) {
+  .gallery__wrapper .gallery__picture {
+    height: 100%;
+  }
+}
+
+/*# sourceMappingURL=Gallery.css.map */

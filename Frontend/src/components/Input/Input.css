@@ -1,0 +1,54 @@
+.input {
+  width: 100%;
+  position: relative;
+}
+.input:has(svg) > input {
+  padding: 6px 32px 6px 12px;
+}
+.input input, .input textarea {
+  width: 100%;
+  padding: 6px 12px;
+  border: 2px solid var(--primary-100);
+  transition: box-shadow 0.2s ease-in-out;
+  border-radius: 6px;
+  outline: none;
+  resize: none;
+}
+.input input:hover, .input textarea:hover {
+  box-shadow: 0 0 10px var(--primary-200);
+}
+.input input:focus + span, .input input:not(:placeholder-shown) + span, .input textarea:focus + span, .input textarea:not(:placeholder-shown) + span {
+  top: -20px;
+  left: 4px;
+}
+.input input[type=number]::-webkit-outer-spin-button, .input input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.input span {
+  color: #a9a9a9;
+  font-size: 12px;
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  transition-duration: 0.2s;
+  transition-property: top, left;
+  transition-timing-function: ease-in-out;
+  user-select: none;
+  pointer-events: none;
+}
+.input svg {
+  height: 18px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  fill: var(--primary-100);
+  transition: fill 0.2s ease-in-out;
+  animation: 0.2s ease-in-out opacity;
+}
+.input svg:hover {
+  fill: var(--primary-200);
+}
+
+/*# sourceMappingURL=Input.css.map */

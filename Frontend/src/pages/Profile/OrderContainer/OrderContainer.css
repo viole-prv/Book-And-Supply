@@ -1,0 +1,16 @@
+.profile__order-container {
+  width: 100%;
+}
+@media screen and (width <= 1024px) {
+  .profile__order-container {
+    padding: 15px;
+  }
+}
+.profile__order-container .order-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+/*# sourceMappingURL=OrderContainer.css.map */

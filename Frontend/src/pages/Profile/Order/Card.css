@@ -1,0 +1,121 @@
+.order-card {
+  width: 100%;
+  display: grid;
+  align-items: center;
+}
+@media screen and (width <= 425px) {
+  .order-card {
+    gap: 20px;
+  }
+}
+@media screen and (width > 425px) {
+  .order-card {
+    gap: 40px;
+  }
+}
+@media screen and (width <= 1024px) {
+  .order-card {
+    grid-template-areas: "picture string" "picture number";
+    grid-template-columns: auto 1fr;
+  }
+}
+@media screen and (width > 1024px) {
+  .order-card {
+    grid-template-areas: "picture string number";
+    grid-template-columns: auto 1fr 1fr;
+  }
+}
+.order-card .order-card__picture {
+  grid-area: picture;
+  display: flex;
+}
+@media screen and (width <= 1024px) {
+  .order-card .order-card__picture {
+    height: 125px;
+  }
+}
+@media screen and (width > 1024px) {
+  .order-card .order-card__picture {
+    height: 150px;
+  }
+}
+.order-card .order-card__header {
+  grid-area: string;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.order-card .order-card__header .header__name > span {
+  font-size: 14px;
+  transition: color 0.2s ease-in-out;
+}
+.order-card .order-card__header .header__name > span:hover {
+  color: var(--primary-100);
+}
+.order-card .order-card__header .header__say {
+  font-size: 12px;
+  transition: color 0.2s ease-in-out;
+  user-select: none;
+  cursor: pointer;
+}
+.order-card .order-card__header .header__say:hover {
+  color: var(--primary-100);
+}
+.order-card .order-card__footer {
+  grid-area: number;
+  display: flex;
+  justify-content: space-between;
+}
+.order-card .order-card__footer span {
+  font-weight: 500;
+  font-size: 12px;
+}
+.order-card .order-card__say {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.order-card .order-card__say .say__star-container {
+  display: flex;
+  margin-bottom: 16px;
+  column-gap: 8px;
+}
+.order-card .order-card__say .say__star-container:hover > .star {
+  fill: #ffca00;
+}
+.order-card .order-card__say .say__star-container > svg:hover ~ .star {
+  fill: #efefef;
+}
+.order-card .order-card__say .say__star-container .star {
+  fill: #efefef;
+  transition: fill 0.2s ease-in-out;
+  cursor: pointer;
+}
+@media screen and (width <= 425px) {
+  .order-card .order-card__say .say__star-container .star {
+    width: 22px;
+    height: 22px;
+  }
+}
+@media screen and (width > 425px) {
+  .order-card .order-card__say .say__star-container .star {
+    width: 24px;
+    height: 24px;
+  }
+}
+.order-card .order-card__say .say__star-container .star-active {
+  fill: #ffca00;
+}
+.order-card .order-card__say .say__textarea {
+  width: 100%;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+.order-card .order-card__say .say__textarea textarea {
+  height: 150px;
+}
+.order-card .order-card__say button {
+  width: 50%;
+}
+
+/*# sourceMappingURL=Card.css.map */

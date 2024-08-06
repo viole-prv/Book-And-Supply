@@ -1,0 +1,33 @@
+.switch {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  padding: 4px 8px;
+  box-shadow: 0 0 10px #ccc;
+
+  svg {
+    height: 22px;
+    fill: var(--primary-100);
+    transition: fill .2s ease-in-out;
+
+    &:hover {
+      fill: var(--primary-200);
+    }
+  }
+
+  input[type="number"] {
+    width: 100%;
+    background: inherit;
+    font-size: 14px;
+    text-align: center;
+    border: none;
+    outline: none;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+}

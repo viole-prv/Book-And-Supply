@@ -1,0 +1,30 @@
+.switch {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  padding: 4px 8px;
+  box-shadow: 0 0 10px #ccc;
+}
+.switch svg {
+  height: 22px;
+  fill: var(--primary-100);
+  transition: fill 0.2s ease-in-out;
+}
+.switch svg:hover {
+  fill: var(--primary-200);
+}
+.switch input[type=number] {
+  width: 100%;
+  background: inherit;
+  font-size: 14px;
+  text-align: center;
+  border: none;
+  outline: none;
+}
+.switch input[type=number]::-webkit-outer-spin-button, .switch input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/*# sourceMappingURL=Switch.css.map */

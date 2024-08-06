@@ -1,0 +1,43 @@
+.security__promotion-wrapper {
+  width: 100%;
+
+  @media screen and (width <= 1024px) {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+  }
+
+  .promotion {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+
+    @media screen and (width <= 425px) {
+      width: 100%;
+    }
+
+    @media screen and (width <= 768px) and (width > 425px)  {
+      width: 320px;
+    }
+
+    @media screen and (width > 768px) {
+      width: 420px;
+    }
+
+    &__main {
+      display: flex;
+      flex-direction: column;
+      padding-top: 20px;
+      row-gap: 15px;
+
+      .main__button {
+        display: flex;
+        justify-content: center;
+
+        button {
+          width: 50%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.profile__favorite-wrapper {
+  width: 100%;
+}
+@media screen and (width <= 1024px) {
+  .profile__favorite-wrapper {
+    padding: 15px 0;
+  }
+}
+.profile__favorite-wrapper .favorite {
+  display: grid;
+  gap: 10px 15px;
+}
+@media screen and (width <= 425px) {
+  .profile__favorite-wrapper .favorite {
+    grid-template-columns: repeat(auto-fit, minmax(var(--mobile), 1fr));
+  }
+}
+@media screen and (width <= 1024px) and (width > 425px) {
+  .profile__favorite-wrapper .favorite {
+    grid-template-columns: repeat(auto-fit, minmax(var(--tablet), 1fr));
+  }
+}
+@media screen and (width > 1024px) {
+  .profile__favorite-wrapper .favorite {
+    grid-template-columns: repeat(auto-fit, minmax(var(--desktop), 1fr));
+  }
+}
+
+/*# sourceMappingURL=Favorite.css.map */

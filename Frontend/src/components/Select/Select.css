@@ -1,0 +1,74 @@
+.select-wrapper {
+  font-size: 14px;
+  position: relative;
+  border: 2px solid #efefef;
+  transition: border-color 0.2s ease-in-out;
+  border-radius: 6px;
+  padding: 6px;
+  user-select: none;
+  cursor: pointer;
+}
+.select-wrapper:hover {
+  border-color: var(--primary-200);
+}
+.select-wrapper .select__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.select-wrapper .select__header span {
+  grid-area: name;
+  font-size: 12px;
+  transition: color 0.2s ease-in-out;
+}
+.select-wrapper .select__header svg {
+  grid-area: icon;
+  width: 18px;
+  height: 18px;
+  fill: #ccc;
+}
+.select-wrapper .select-container {
+  z-index: 250;
+  width: 100%;
+  position: absolute;
+  background-color: #fff;
+  border: 2px solid #efefef;
+  border-radius: 6px;
+  margin-top: 12px;
+  margin-left: -6px;
+  padding: 4px;
+  animation: 0.5s forwards opacity;
+}
+.select-wrapper .select-container .select {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.2s ease-in-out;
+}
+.select-wrapper .select-container .select:first-child {
+  margin-top: 2px;
+}
+.select-wrapper .select-container .select:last-child {
+  margin-bottom: 2px;
+}
+.select-wrapper .select-container .select:hover {
+  background-color: #f7f7f7;
+}
+.select-wrapper .select-container .select-current > span {
+  color: var(--primary-100);
+}
+.select-wrapper .select-container .select span {
+  width: 100%;
+  font-size: 12px;
+  padding: 6px;
+}
+.select-wrapper .select-container .select svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--primary-100);
+  margin-right: 6px;
+}
+
+/*# sourceMappingURL=Select.css.map */

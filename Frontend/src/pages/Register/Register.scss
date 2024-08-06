@@ -1,0 +1,83 @@
+.register-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .register {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+
+    &__top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 30px;
+
+      .top__picture {
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+        border-radius: 50%;
+      }
+
+      .top__drag-drop {
+        width: 100%;
+        height: 50px;
+      }
+
+      .top__date-birth {
+        margin: 20px 0;
+        display: flex;
+        column-gap: 20px;
+      }
+
+      .top__re-captcha {
+
+      }
+    }
+
+    &__bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .bottom__button {
+        width: 225px;
+        display: flex;
+
+        &:has(svg) {
+          margin-right: 30px;
+        }
+
+        svg {
+          flex-shrink: 0;
+          width: 30px;
+          height: 30px;
+          fill: var(--primary-100);
+          transition: fill .2s ease-in-out;
+
+          &:hover {
+            fill: var(--primary-200);
+          }
+        }
+
+        button {
+          width: 100%;
+        }
+      }
+
+      a {
+        color: #a9a9a9;
+        font-size: 12px;
+        margin-top: 6px;
+        user-select: none;
+        cursor: pointer;
+      }
+    }
+  }
+}

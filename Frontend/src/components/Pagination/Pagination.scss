@@ -1,0 +1,39 @@
+.pagination-wrapper {
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--primary-100);
+    transition: fill .2s ease-in-out;
+
+    &:hover {
+      fill: var(--primary-200);
+    }
+  }
+
+  .pagination-container {
+    display: flex;
+    column-gap: 2px;
+
+    .pagination {
+      font-size: 12px;
+      padding: 4px 10px;
+      user-select: none;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f7f7f7;
+        border-radius: 6px;
+      }
+
+      &-current {
+        color: var(--primary-100);
+      }
+    }
+  }
+}

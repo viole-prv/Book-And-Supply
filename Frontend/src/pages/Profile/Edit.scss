@@ -1,0 +1,61 @@
+.profile__edit-wrapper {
+  width: 100%;
+
+  @media screen and (width <= 1024px) {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+  }
+
+  .edit {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+
+    @media screen and (width <= 425px) {
+      width: 100%;
+    }
+
+    @media screen and (width <= 768px) and (width > 425px)  {
+      width: 320px;
+    }
+
+    @media screen and (width > 768px) {
+      width: 420px;
+    }
+
+    &__top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 30px;
+
+      .top__picture {
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+        border-radius: 50%;
+      }
+
+      .top__drag-drop {
+        width: 50%;
+        height: 50px;
+      }
+
+      .top__date-birth {
+        margin: 20px 0;
+        display: flex;
+        column-gap: 20px;
+      }
+    }
+
+    &__bottom {
+      display: flex;
+      justify-content: center;
+
+      button {
+        width: 50%;
+      }
+    }
+  }
+}

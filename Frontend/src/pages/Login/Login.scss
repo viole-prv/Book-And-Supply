@@ -1,0 +1,40 @@
+.login-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .login {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+
+    &__top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 30px;
+    }
+
+    &__bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      button {
+        width: 225px;
+      }
+
+      a {
+        color: #a9a9a9;
+        font-size: 12px;
+        margin-top: 6px;
+        user-select: none;
+        cursor: pointer;
+      }
+    }
+  }
+}

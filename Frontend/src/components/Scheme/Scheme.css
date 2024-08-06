@@ -1,0 +1,23 @@
+.scheme {
+  border-spacing: 10px;
+}
+.scheme td {
+  font-size: 12px;
+  text-align: center;
+}
+.scheme th {
+  width: 100%;
+  padding: 0 12px;
+}
+.scheme th .progress-wrapper, .scheme th .progress {
+  height: 6px;
+  border-radius: 6px;
+}
+.scheme th .progress-wrapper {
+  background-color: #efefef;
+}
+.scheme th .progress-wrapper .progress {
+  background-color: #ffca00;
+}
+
+/*# sourceMappingURL=Scheme.css.map */

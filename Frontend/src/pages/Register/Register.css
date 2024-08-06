@@ -1,0 +1,69 @@
+.register-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.register-wrapper .register {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+.register-wrapper .register__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+}
+.register-wrapper .register__top .top__picture {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+.register-wrapper .register__top .top__drag-drop {
+  width: 100%;
+  height: 50px;
+}
+.register-wrapper .register__top .top__date-birth {
+  margin: 20px 0;
+  display: flex;
+  column-gap: 20px;
+}
+.register-wrapper .register__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.register-wrapper .register__bottom .bottom__button {
+  width: 225px;
+  display: flex;
+}
+.register-wrapper .register__bottom .bottom__button:has(svg) {
+  margin-right: 30px;
+}
+.register-wrapper .register__bottom .bottom__button svg {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  fill: var(--primary-100);
+  transition: fill 0.2s ease-in-out;
+}
+.register-wrapper .register__bottom .bottom__button svg:hover {
+  fill: var(--primary-200);
+}
+.register-wrapper .register__bottom .bottom__button button {
+  width: 100%;
+}
+.register-wrapper .register__bottom a {
+  color: #a9a9a9;
+  font-size: 12px;
+  margin-top: 6px;
+  user-select: none;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=Register.css.map */

@@ -1,0 +1,45 @@
+.security__promotion-wrapper {
+  width: 100%;
+}
+@media screen and (width <= 1024px) {
+  .security__promotion-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+  }
+}
+.security__promotion-wrapper .promotion {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+@media screen and (width <= 425px) {
+  .security__promotion-wrapper .promotion {
+    width: 100%;
+  }
+}
+@media screen and (width <= 768px) and (width > 425px) {
+  .security__promotion-wrapper .promotion {
+    width: 320px;
+  }
+}
+@media screen and (width > 768px) {
+  .security__promotion-wrapper .promotion {
+    width: 420px;
+  }
+}
+.security__promotion-wrapper .promotion__main {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  row-gap: 15px;
+}
+.security__promotion-wrapper .promotion__main .main__button {
+  display: flex;
+  justify-content: center;
+}
+.security__promotion-wrapper .promotion__main .main__button button {
+  width: 50%;
+}
+
+/*# sourceMappingURL=Promotion.css.map */

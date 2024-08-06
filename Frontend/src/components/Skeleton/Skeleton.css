@@ -1,0 +1,18 @@
+.skeleton {
+  position: relative;
+  background: #f7f7f7;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.skeleton::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background: linear-gradient(to right, transparent 0%, #fff 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: 2s linear infinite position;
+}
+
+/*# sourceMappingURL=Skeleton.css.map */

@@ -1,0 +1,64 @@
+.input {
+  width: 100%;
+  position: relative;
+
+  &:has(svg) > input {
+    padding: 6px 32px 6px 12px;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 6px 12px;
+    border: 2px solid var(--primary-100);
+    transition: box-shadow .2s ease-in-out;
+    border-radius: 6px;
+    outline: none;
+    resize: none;
+
+    &:hover {
+      box-shadow: 0 0 10px var(--primary-200);
+    }
+
+    &:focus + span,
+    &:not(:placeholder-shown) + span {
+      top: -20px;
+      left: 4px;
+    }
+  }
+
+  input[type="number"] {
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  span {
+    color: #a9a9a9;
+    font-size: 12px;
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    transition-duration: .2s;
+    transition-property: top, left;
+    transition-timing-function: ease-in-out;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  svg {
+    height: 18px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    fill: var(--primary-100);
+    transition: fill .2s ease-in-out;
+    animation: .2s ease-in-out opacity;
+
+    &:hover {
+      fill: var(--primary-200);
+    }
+  }
+}

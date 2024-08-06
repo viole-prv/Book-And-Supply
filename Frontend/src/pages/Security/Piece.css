@@ -1,0 +1,175 @@
+.security__piece-wrapper {
+  width: 100%;
+}
+@media screen and (width <= 1024px) {
+  .security__piece-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+  }
+}
+.security__piece-wrapper .piece {
+  display: flex;
+}
+@media screen and (width <= 425px) {
+  .security__piece-wrapper .piece {
+    width: 100%;
+  }
+}
+@media screen and (width <= 1024px) {
+  .security__piece-wrapper .piece {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+  }
+}
+@media screen and (width > 1024px) {
+  .security__piece-wrapper .piece {
+    column-gap: 30px;
+  }
+}
+.security__piece-wrapper .piece__main {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  row-gap: 15px;
+}
+@media screen and (width <= 425px) {
+  .security__piece-wrapper .piece__main {
+    width: 100%;
+  }
+}
+@media screen and (width <= 768px) and (width > 425px) {
+  .security__piece-wrapper .piece__main {
+    width: 320px;
+  }
+}
+@media screen and (width > 768px) {
+  .security__piece-wrapper .piece__main {
+    width: 420px;
+  }
+}
+.security__piece-wrapper .piece__main .main__trailer-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  animation: 0.5s forwards opacity;
+}
+.security__piece-wrapper .piece__main .main__trailer-wrapper .trailer {
+  display: flex;
+  position: relative;
+}
+.security__piece-wrapper .piece__main .main__trailer-wrapper .trailer__picture {
+  width: 75px;
+  height: 75px;
+  display: flex;
+}
+.security__piece-wrapper .piece__main .main__trailer-wrapper .trailer__picture img {
+  object-fit: cover;
+  border-radius: 50%;
+}
+.security__piece-wrapper .piece__main .main__trailer-wrapper .trailer__icon {
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  background-color: transparent;
+  transition-duration: 0.2s;
+  transition-property: opacity, background-color;
+  transition-timing-function: ease-in-out;
+  border-radius: 50%;
+}
+.security__piece-wrapper .piece__main .main__trailer-wrapper .trailer__icon:hover {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.5);
+}
+.security__piece-wrapper .piece__main .main__trailer-wrapper .trailer__icon svg {
+  width: 25px;
+  height: 25px;
+  fill: #fff;
+}
+.security__piece-wrapper .piece__main .main__drag-drop {
+  height: 50px;
+  margin-bottom: 15px;
+}
+.security__piece-wrapper .piece__main .main__textarea {
+  width: 100%;
+  margin-top: 15px;
+}
+.security__piece-wrapper .piece__main .main__textarea textarea {
+  height: 250px;
+}
+.security__piece-wrapper .piece__main .main__select {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (width <= 425px) {
+  .security__piece-wrapper .piece__main .main__select {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+}
+@media screen and (width > 425px) {
+  .security__piece-wrapper .piece__main .main__select {
+    column-gap: 20px;
+  }
+}
+.security__piece-wrapper .piece__main .main__select .select-wrapper {
+  width: 100%;
+}
+.security__piece-wrapper .piece__main .main__button {
+  display: flex;
+  justify-content: center;
+}
+.security__piece-wrapper .piece__main .main__button button {
+  width: 50%;
+}
+.security__piece-wrapper .piece__property {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  column-gap: 20px;
+  row-gap: 40px;
+}
+@media screen and (width <= 425px) {
+  .security__piece-wrapper .piece__property {
+    width: 100%;
+  }
+}
+@media screen and (width <= 1024px) {
+  .security__piece-wrapper .piece__property {
+    justify-content: center;
+  }
+}
+.security__piece-wrapper .piece__property .property-wrapper {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+@media screen and (width <= 425px) {
+  .security__piece-wrapper .piece__property .property-wrapper {
+    width: 100%;
+  }
+}
+@media screen and (width <= 768px) and (width > 425px) {
+  .security__piece-wrapper .piece__property .property-wrapper {
+    width: 150px;
+  }
+}
+@media screen and (width > 768px) {
+  .security__piece-wrapper .piece__property .property-wrapper {
+    width: 200px;
+  }
+}
+.security__piece-wrapper .piece__property .property-wrapper .interactive-wrapper {
+  width: 100%;
+}
+
+/*# sourceMappingURL=Piece.css.map */

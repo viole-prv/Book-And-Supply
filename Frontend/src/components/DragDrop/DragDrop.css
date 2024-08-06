@@ -1,0 +1,48 @@
+.drag-drop {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  text-align: center;
+  background-image: linear-gradient(90deg, #efefef 50%, transparent 50%), linear-gradient(90deg, #efefef 50%, transparent 50%), linear-gradient(0deg, #efefef 50%, transparent 50%), linear-gradient(0deg, #efefef 50%, transparent 50%);
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-size: 15px 2px, 15px 2px, 2px 15px, 2px 15px;
+  background-position: left top, right bottom, left bottom, right top;
+}
+.drag-drop-active, .drag-drop:hover {
+  background-image: linear-gradient(90deg, var(--primary-100) 50%, transparent 50%), linear-gradient(90deg, var(--primary-100) 50%, transparent 50%), linear-gradient(0deg, var(--primary-100) 50%, transparent 50%), linear-gradient(0deg, var(--primary-100) 50%, transparent 50%);
+  animation: 1s infinite linear border-dance;
+}
+.drag-drop-active svg, .drag-drop:hover svg {
+  fill: var(--primary-100) !important;
+}
+.drag-drop input[type=file] {
+  display: none;
+}
+.drag-drop__icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+.drag-drop__icon svg {
+  width: 28px;
+  height: 28px;
+  fill: #efefef;
+  transition: fill 0.2s ease-in-out;
+}
+
+@keyframes border-dance {
+  0% {
+    background-position: left top, right bottom, left bottom, right top;
+  }
+  100% {
+    background-position: left 15px top, right 15px bottom, left bottom 15px, right top 15px;
+  }
+}
+
+/*# sourceMappingURL=DragDrop.css.map */

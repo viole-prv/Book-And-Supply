@@ -1,0 +1,87 @@
+.look-wrapper {
+  width: 100%;
+}
+.look-wrapper:hover > .look > input {
+  background: #fff;
+  box-shadow: 0 0 10px #ccc;
+}
+.look-wrapper .look {
+  z-index: 600;
+  position: relative;
+}
+.look-wrapper .look input {
+  width: 100%;
+  height: 40px;
+  padding: 8px 80px 8px 12px;
+  background: #f7f7f7;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  transition-duration: 0.2s;
+  transition-property: background, border-bottom-left-radius, border-bottom-right-radius, box-shadow;
+  transition-timing-function: ease-in-out;
+  border: none;
+  outline: none;
+  resize: none;
+}
+.look-wrapper .look .input__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  column-gap: 10px;
+}
+.look-wrapper .look .input__icon svg {
+  height: 20px;
+  fill: var(--primary-100);
+  transition: fill 0.2s ease-in-out;
+  animation: 0.2s ease-in-out opacity;
+}
+.look-wrapper .look .input__icon svg:not(:last-child) {
+  border-right: 1px solid #ccc;
+  padding-right: 10px;
+}
+.look-wrapper .look .input__icon svg:hover {
+  fill: var(--primary-200);
+}
+.look-wrapper .look .input__dropdown {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  background: #fff;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  animation: 0.2s ease-in-out opacity;
+}
+.look-wrapper .look .input__dropdown a {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  padding: 8px;
+}
+.look-wrapper .look .input__dropdown a:hover > span {
+  color: var(--primary-100);
+}
+.look-wrapper .look .input__dropdown a img {
+  width: unset;
+  height: 40px;
+}
+.look-wrapper .look .input__dropdown a span {
+  font-size: 12px;
+  transition: color 0.2s ease-in-out;
+}
+.look-wrapper .overlay {
+  z-index: 550;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  animation: 0.2s ease-in-out opacity;
+}
+
+/*# sourceMappingURL=Look.css.map */

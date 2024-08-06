@@ -1,0 +1,109 @@
+.security__category-wrapper {
+  width: 100%;
+
+  @media screen and (width <= 1024px) {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+  }
+
+  .category {
+    display: flex;
+
+    @media screen and (width <= 425px) {
+      width: 100%;
+    }
+
+    @media screen and (width <= 1024px) {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 30px;
+    }
+
+    @media screen and (width > 1024px) {
+      column-gap: 30px;
+    }
+
+    &__main {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      padding-top: 20px;
+      row-gap: 15px;
+
+      @media screen and (width <= 425px) {
+        width: 100%;
+      }
+
+      @media screen and (width <= 768px) and (width > 425px)  {
+        width: 320px;
+      }
+
+      @media screen and (width > 768px) {
+        width: 420px;
+      }
+
+      .main__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 8px;
+
+        button {
+          width: 50%;
+        }
+
+        svg {
+          width: 24px;
+          height: 24px;
+          fill: var(--primary-100);
+          transition: fill .2s ease-in-out;
+
+          &:hover {
+            fill: var(--primary-200);
+          }
+        }
+      }
+    }
+
+    &__property {
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 20px;
+      column-gap: 20px;
+      row-gap: 40px;
+
+      @media screen and (width <= 425px) {
+        width: 100%;
+      }
+
+      @media screen and (width <= 1024px) {
+        justify-content: center;
+      }
+
+      .property-wrapper {
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+
+        @media screen and (width <= 425px) {
+          width: 100%;
+        }
+
+        @media screen and (width <= 768px) and (width > 425px)  {
+          width: 150px;
+        }
+
+        @media screen and (width > 768px) {
+          width: 200px;
+        }
+
+        .interactive-wrapper {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

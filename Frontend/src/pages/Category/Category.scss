@@ -1,0 +1,44 @@
+.category-wrapper {
+  width: 100%;
+  padding: 15px;
+
+  @media screen and (width > 1024px) {
+    max-width: 1440px;
+  }
+
+  .category-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 32px;
+
+    .category {
+      display: flex;
+      flex-direction: column;
+      row-gap: 8px;
+
+      &__header {
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-left: 20px;
+        transition: color .2s ease-in-out;
+
+        @media screen and (width <= 425px) {
+          font-size: 18px;
+        }
+
+        @media screen and (width <= 1024px) and (width > 425px) {
+          font-size: 20px;
+        }
+
+        @media screen and (width > 1024px) {
+          font-size: 22px;
+        }
+
+        &:hover {
+          color: var(--primary-100);
+        }
+      }
+    }
+  }
+}

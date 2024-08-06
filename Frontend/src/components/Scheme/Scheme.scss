@@ -1,0 +1,26 @@
+.scheme {
+  border-spacing: 10px;
+
+  td {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  th {
+    width: 100%;
+    padding: 0 12px;
+
+    .progress-wrapper, .progress {
+      height: 6px;
+      border-radius: 6px;
+    }
+
+    .progress-wrapper {
+      background-color: #efefef;
+
+      .progress {
+        background-color: #ffca00;
+      }
+    }
+  }
+}

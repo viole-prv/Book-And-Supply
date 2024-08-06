@@ -1,0 +1,60 @@
+.profile__edit-wrapper {
+  width: 100%;
+}
+@media screen and (width <= 1024px) {
+  .profile__edit-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+  }
+}
+.profile__edit-wrapper .edit {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+@media screen and (width <= 425px) {
+  .profile__edit-wrapper .edit {
+    width: 100%;
+  }
+}
+@media screen and (width <= 768px) and (width > 425px) {
+  .profile__edit-wrapper .edit {
+    width: 320px;
+  }
+}
+@media screen and (width > 768px) {
+  .profile__edit-wrapper .edit {
+    width: 420px;
+  }
+}
+.profile__edit-wrapper .edit__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+}
+.profile__edit-wrapper .edit__top .top__picture {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+.profile__edit-wrapper .edit__top .top__drag-drop {
+  width: 50%;
+  height: 50px;
+}
+.profile__edit-wrapper .edit__top .top__date-birth {
+  margin: 20px 0;
+  display: flex;
+  column-gap: 20px;
+}
+.profile__edit-wrapper .edit__bottom {
+  display: flex;
+  justify-content: center;
+}
+.profile__edit-wrapper .edit__bottom button {
+  width: 50%;
+}
+
+/*# sourceMappingURL=Edit.css.map */

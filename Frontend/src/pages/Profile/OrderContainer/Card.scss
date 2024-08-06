@@ -1,0 +1,115 @@
+.order-container-card {
+  display: grid;
+  row-gap: 30px;
+
+  @media screen and (width <= 1024px) {
+    grid-template-areas: "header footer" "main main";
+    grid-template-columns: 1fr auto;
+  }
+
+  @media screen and (width > 1024px) {
+    grid-template-areas: "header" "main" "footer";
+  }
+
+  .order-container-card__header {
+    grid-area: header;
+    display: flex;
+
+    @media screen and (width <= 1024px) {
+      flex-direction: column;
+      row-gap: 10px;
+    }
+
+    @media screen and (width > 1024px) {
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header__date {
+      @media screen and (width <= 425px) {
+        font-size: 18px;
+      }
+
+      @media screen and (width <= 1024px) and (width > 425px)  {
+        font-size: 20px;
+      }
+
+      @media screen and (width > 1024px) {
+        font-size: 22px;
+      }
+    }
+
+    .header__price {
+      font-weight: 500;
+
+      @media screen and (width <= 425px) {
+        font-size: 16px;
+      }
+
+      @media screen and (width <= 1024px) and (width > 425px) {
+        font-size: 18px;
+      }
+
+      @media screen and (width > 1024px) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .order-container-card__main {
+    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #f7f7f7;
+    padding-top: 20px;
+    gap: 20px;
+
+    .main__picture {
+      height: 100px;
+      display: flex;
+    }
+  }
+
+  .order-container-card__footer {
+    grid-area: footer;
+
+    .footer__icon {
+      width: 24px;
+      height: 24px;
+      fill: var(--primary-100);
+      transition: fill .2s ease-in-out;
+
+      &:hover {
+        fill: var(--primary-200);
+      }
+    }
+
+    .footer-wrapper {
+      display: flex;
+      user-select: none;
+      cursor: pointer;
+
+      @media screen and (width <= 1024px) {
+        flex-direction: column;
+      }
+
+      @media screen and (width > 1024px) {
+        column-gap: 15px;
+        justify-content: flex-end;
+      }
+
+      span {
+        font-size: 12px;
+        transition: color 0.2s ease-in-out;
+
+        @media screen and (width <= 1024px) {
+          padding: 6px;
+        }
+
+        &:hover {
+          color: var(--primary-100);
+        }
+      }
+    }
+  }
+}

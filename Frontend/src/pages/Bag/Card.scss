@@ -1,0 +1,155 @@
+.bag-card {
+  display: grid;
+  column-gap: 30px;
+
+  @media screen and (width <= 1024px) {
+    align-items: start;
+    grid-template-areas: "picture price icon" "picture name icon" "picture buy icon";
+    grid-template-columns: auto 1fr auto;
+    row-gap: 10px;
+  }
+
+  @media screen and (width > 1024px) {
+    align-items: center;
+    grid-template-areas: "picture name buy price icon";
+    grid-template-columns: auto 1fr auto auto auto;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #f7f7f7;
+    padding-bottom: 30px;
+  }
+
+  &__picture {
+    grid-area: picture;
+    display: flex;
+
+    @media screen and (width <= 1024px) {
+      height: 125px;
+    }
+
+    @media screen and (width > 1024px) {
+      height: 150px;
+    }
+  }
+
+  &__name {
+    grid-area: name;
+    font-size: 14px;
+    transition: color .2s ease-in-out;
+
+    @media screen and (width > 1024px) {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    &:hover {
+      color: var(--primary-100);
+    }
+
+    span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &__buy {
+    grid-area: buy;
+    width: 100px;
+  }
+
+  &__price {
+    grid-area: price;
+    display: grid;
+    align-items: center;
+    grid-template-areas: "current current" "rate primary";
+    gap: 4px;
+
+    @media screen and (width <= 1024px) {
+      justify-content: start;
+    }
+
+    @media screen and (width > 1024px) {
+      width: 100px;
+      justify-content: center;
+    }
+
+    span {
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .price__current {
+      grid-area: current;
+
+      @media screen and (width <= 1024px) {
+        font-size: 16px;
+      }
+
+      @media screen and (width > 1024px) {
+        font-size: 18px;
+      }
+    }
+
+    .price__rate {
+      grid-area: rate;
+      color: #fff;
+      background: crimson;
+      padding: 4px 6px;
+      border-radius: 6px;
+
+      @media screen and (width <= 1024px) {
+        font-size: 10px;
+      }
+
+      @media screen and (width > 1024px) {
+        font-size: 12px;
+      }
+    }
+
+    .price__primary {
+      grid-area: primary;
+      display: flex;
+
+      span {
+        position: relative;
+        color: #ccc;
+
+        @media screen and (width <= 1024px) {
+          font-size: 10px;
+        }
+
+        @media screen and (width > 1024px) {
+          font-size: 12px;
+        }
+
+        &:after {
+          content: "";
+          width: 100%;
+          height: 1px;
+          display: block;
+          position: absolute;
+          top: 50%;
+          background-color: crimson;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    grid-area: icon;
+
+    .icon {
+      width: 22px;
+      height: 22px;
+
+      svg {
+        fill: var(--primary-100);
+
+        &:hover {
+          fill: var(--primary-200);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.security__user-wrapper {
+  width: 100%;
+}
+@media screen and (width <= 1024px) {
+  .security__user-wrapper {
+    padding: 0 15px;
+  }
+}
+
+/*# sourceMappingURL=User.css.map */

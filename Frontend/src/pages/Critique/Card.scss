@@ -1,0 +1,46 @@
+.critique-card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    .top__picture {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .top__info {
+      display: grid;
+      align-items: center;
+      grid-template-areas: "author author" "star date";
+      row-gap: 2px;
+      column-gap: 4px;
+
+      .info__author {
+        grid-area: author;
+        font-size: 16px;
+        margin-left: 2px;
+      }
+
+      .info__star {
+        grid-area: star;
+      }
+
+      .info__date {
+        grid-area: date;
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__bottom {
+    width: 100%;
+    font-size: 14px;
+    white-space: break-spaces;
+  }
+}

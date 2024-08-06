@@ -1,0 +1,19 @@
+footer {
+  z-index: 450;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  bottom: 0;
+  background-color: #fff;
+  border-top: 1px solid #f7f7f7;
+  margin-top: auto;
+
+  @media screen and (width > 768px) {
+    display: none;
+  }
+
+  .footer {
+    width: 100%;
+  }
+}

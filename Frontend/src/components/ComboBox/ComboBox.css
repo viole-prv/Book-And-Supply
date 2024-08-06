@@ -1,0 +1,90 @@
+.combo-box-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+.combo-box-wrapper .combo-box__header {
+  position: relative;
+}
+.combo-box-wrapper .combo-box__header:hover > input[type=text] {
+  border-color: var(--primary-200);
+}
+.combo-box-wrapper .combo-box__header:hover > svg {
+  fill: var(--primary-200);
+}
+.combo-box-wrapper .combo-box__header input[type=text] {
+  width: 100%;
+  font-size: 12px;
+  padding: 6px 32px 6px 12px;
+  border: 2px solid #efefef;
+  transition: border-color 0.2s ease-in-out;
+  border-radius: 6px;
+  outline: none;
+}
+.combo-box-wrapper .combo-box__header svg {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  fill: #ccc;
+  transition: fill 0.2s ease-in-out;
+  transform: translateY(-50%);
+}
+.combo-box-wrapper .combo-box-container {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #efefef;
+  border-radius: 6px;
+  padding: 4px;
+  row-gap: 2px;
+  animation: 0.2s ease-in-out opacity;
+}
+.combo-box-wrapper .combo-box-container .combo-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+  padding: 6px 4px 6px 8px;
+  transition: background-color 0.2s ease-in-out;
+}
+.combo-box-wrapper .combo-box-container .combo-box:last-child {
+  margin-bottom: 2px;
+}
+.combo-box-wrapper .combo-box-container .combo-box:hover {
+  background-color: #f7f7f7;
+}
+.combo-box-wrapper .combo-box-container .combo-box span {
+  font-size: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.combo-box-wrapper .combo-box-container .combo-box svg {
+  width: 18px;
+  height: 18px;
+  fill: #ccc;
+  transition: fill 0.2s ease-in-out;
+  margin-left: 4px;
+}
+.combo-box-wrapper .combo-box-container .combo-box svg:hover {
+  fill: var(--primary-200);
+}
+.combo-box-wrapper .combo-box__show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.combo-box-wrapper .combo-box__show span {
+  color: var(--primary-100);
+  font-size: 12px;
+  user-select: none;
+  cursor: pointer;
+}
+.combo-box-wrapper .combo-box__show svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--primary-200);
+}
+
+/*# sourceMappingURL=ComboBox.css.map */

@@ -1,0 +1,57 @@
+.navigation-wrapper {
+  width: 100%;
+  display: flex;
+  column-gap: 8px;
+}
+@media screen and (width <= 1024px) {
+  .navigation-wrapper {
+    flex-wrap: wrap;
+    padding: 15px;
+    gap: 10px;
+  }
+}
+@media screen and (width > 1024px) {
+  .navigation-wrapper {
+    margin-bottom: 15px;
+  }
+}
+.navigation-wrapper .navigation {
+  font-size: 12px;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  user-select: none;
+  cursor: pointer;
+}
+@media screen and (width <= 1024px) {
+  .navigation-wrapper .navigation {
+    border-radius: 6px;
+    background-color: #f7f7f7;
+    transition-property: color, background-color;
+    padding: 6px 10px;
+  }
+  .navigation-wrapper .navigation:hover {
+    background-color: var(--primary-100);
+    color: #fff;
+  }
+}
+@media screen and (width > 1024px) {
+  .navigation-wrapper .navigation {
+    transition-property: color;
+  }
+  .navigation-wrapper .navigation:before {
+    content: "-";
+    color: #a9a9a9;
+    margin-right: 8px;
+  }
+  .navigation-wrapper .navigation:first-child:before {
+    content: none;
+  }
+  .navigation-wrapper .navigation:hover {
+    color: var(--primary-100);
+  }
+}
+.navigation-wrapper .navigation-current {
+  pointer-events: none;
+}
+
+/*# sourceMappingURL=Navigation.css.map */

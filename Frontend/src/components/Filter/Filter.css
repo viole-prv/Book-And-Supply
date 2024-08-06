@@ -1,0 +1,41 @@
+.filter {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.filter__top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  column-gap: 4px;
+  cursor: pointer;
+}
+.filter__top:hover > svg {
+  fill: var(--primary-100);
+}
+.filter__top:hover > span {
+  color: var(--primary-100);
+}
+.filter__top svg {
+  width: 20px;
+  height: 20px;
+  fill: #ccc;
+  transition: fill 0.2s ease-in-out;
+}
+.filter__top span {
+  font-size: 14px;
+  transition: color 0.2s ease-in-out;
+  text-align: left;
+}
+.filter-active > svg {
+  fill: var(--primary-100);
+}
+.filter-active > span {
+  color: var(--primary-100);
+}
+.filter__bottom {
+  margin-left: 28px;
+  margin-right: 4px;
+}
+
+/*# sourceMappingURL=Filter.css.map */
